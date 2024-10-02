@@ -1,6 +1,10 @@
 # espn-openapi
 OpenAPI file documenting ESPN's hidden APIs
 
+## Documentation Portal
+
+You can view the latest API docs [in Zudoku here](https://zudoku.dev/demo?api-url=https://raw.githubusercontent.com/zuplo/espn-openapi/refs/heads/main/espn_openapi_soccer_league_path.yaml)
+
 ## Help Needed
 
 Volunteers are requested to transcribe APIs from the following lists
