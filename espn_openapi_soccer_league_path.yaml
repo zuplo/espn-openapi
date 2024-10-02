@@ -1,0 +1,408 @@
+info:
+  description: A collection of ESPN API endpoints for retrieving sports-related information
+    like scores, news, team details, and rankings.
+  title: ESPN Sports API
+  version: 1.0.0
+openapi: 3.0.0
+paths:
+  /sports/baseball/college-baseball/scoreboard:
+    get:
+      responses:
+        '200':
+          description: Successful response with College Baseball scores
+      summary: Get latest College Baseball scores
+  /sports/baseball/mlb/news:
+    get:
+      responses:
+        '200':
+          description: Successful response with MLB news
+      summary: Get latest MLB news
+  /sports/baseball/mlb/scoreboard:
+    get:
+      responses:
+        '200':
+          description: Successful response with MLB scores
+      summary: Get latest MLB scores
+  /sports/baseball/mlb/teams:
+    get:
+      responses:
+        '200':
+          description: Successful response with all MLB teams data
+      summary: Get all MLB teams
+  /sports/baseball/mlb/teams/{team}:
+    get:
+      parameters:
+      - in: path
+        name: team
+        required: true
+        schema:
+          example: nyy
+          type: string
+      responses:
+        '200':
+          description: Successful response with MLB team data
+      summary: Get specific MLB team information
+  /sports/basketball/mens-college-basketball/news:
+    get:
+      responses:
+        '200':
+          description: Successful response with Men's College Basketball news
+      summary: Get latest Men's College Basketball news
+  /sports/basketball/mens-college-basketball/scoreboard:
+    get:
+      responses:
+        '200':
+          description: Successful response with Men's College Basketball scores
+      summary: Get latest Men's College Basketball scores
+  /sports/basketball/mens-college-basketball/teams:
+    get:
+      responses:
+        '200':
+          description: Successful response with all Men's College Basketball teams
+            data
+      summary: Get all Men's College Basketball teams
+  /sports/basketball/mens-college-basketball/teams/{team}:
+    get:
+      parameters:
+      - in: path
+        name: team
+        required: true
+        schema:
+          example: duke
+          type: string
+      responses:
+        '200':
+          description: Successful response with Men's College Basketball team data
+      summary: Get specific Men's College Basketball team information
+  /sports/basketball/nba/news:
+    get:
+      responses:
+        '200':
+          description: Successful response with NBA news
+      summary: Get latest NBA news
+  /sports/basketball/nba/scoreboard:
+    get:
+      responses:
+        '200':
+          description: Successful response with NBA scores
+      summary: Get latest NBA scores
+  /sports/basketball/nba/teams:
+    get:
+      responses:
+        '200':
+          description: Successful response with all NBA teams data
+      summary: Get all NBA teams
+  /sports/basketball/nba/teams/{team}:
+    get:
+      parameters:
+      - in: path
+        name: team
+        required: true
+        schema:
+          example: lal
+          type: string
+      responses:
+        '200':
+          description: Successful response with NBA team data
+      summary: Get specific NBA team information
+  /sports/basketball/wnba/news:
+    get:
+      responses:
+        '200':
+          description: Successful response with WNBA news
+      summary: Get latest WNBA news
+  /sports/basketball/wnba/scoreboard:
+    get:
+      responses:
+        '200':
+          description: Successful response with WNBA scores
+      summary: Get latest WNBA scores
+  /sports/basketball/wnba/teams:
+    get:
+      responses:
+        '200':
+          description: Successful response with all WNBA teams data
+      summary: Get all WNBA teams
+  /sports/basketball/wnba/teams/{team}:
+    get:
+      parameters:
+      - in: path
+        name: team
+        required: true
+        schema:
+          example: lynx
+          type: string
+      responses:
+        '200':
+          description: Successful response with WNBA team data
+      summary: Get specific WNBA team information
+  /sports/basketball/womens-college-basketball/news:
+    get:
+      responses:
+        '200':
+          description: Successful response with Women's College Basketball news
+      summary: Get latest Women's College Basketball news
+  /sports/basketball/womens-college-basketball/scoreboard:
+    get:
+      responses:
+        '200':
+          description: Successful response with Women's College Basketball scores
+      summary: Get latest Women's College Basketball scores
+  /sports/basketball/womens-college-basketball/teams:
+    get:
+      responses:
+        '200':
+          description: Successful response with all Women's College Basketball teams
+            data
+      summary: Get all Women's College Basketball teams
+  /sports/basketball/womens-college-basketball/teams/{team}:
+    get:
+      parameters:
+      - in: path
+        name: team
+        required: true
+        schema:
+          example: uconn
+          type: string
+      responses:
+        '200':
+          description: Successful response with Women's College Basketball team data
+      summary: Get specific Women's College Basketball team information
+  /sports/football/college-football/news:
+    get:
+      responses:
+        '200':
+          description: Successful response with news data
+      summary: Get latest college football news
+  /sports/football/college-football/rankings:
+    get:
+      responses:
+        '200':
+          description: Successful response with rankings data
+      summary: Get college football rankings
+  /sports/football/college-football/scoreboard:
+    get:
+      parameters:
+      - in: query
+        name: calendar
+        required: false
+        schema:
+          type: string
+      - in: query
+        name: dates
+        required: false
+        schema:
+          example: YYYYMMDD
+          type: string
+      responses:
+        '200':
+          description: Successful response with scores data
+      summary: Get latest college football scores
+  /sports/football/college-football/summary:
+    get:
+      parameters:
+      - in: query
+        name: event
+        required: true
+        schema:
+          example: '400934572'
+          type: string
+      responses:
+        '200':
+          description: Successful response with game information
+      summary: Get specific game information
+  /sports/football/college-football/teams/{team}:
+    get:
+      parameters:
+      - in: path
+        name: team
+        required: true
+        schema:
+          example: gt
+          type: string
+      responses:
+        '200':
+          description: Successful response with team information
+      summary: Get college football team information
+  /sports/football/nfl/news:
+    get:
+      responses:
+        '200':
+          description: Successful response with NFL news
+      summary: Get latest NFL news
+  /sports/football/nfl/scoreboard:
+    get:
+      responses:
+        '200':
+          description: Successful response with NFL scores
+      summary: Get latest NFL scores
+  /sports/football/nfl/teams:
+    get:
+      responses:
+        '200':
+          description: Successful response with all NFL teams data
+      summary: Get all NFL teams
+  /sports/football/nfl/teams/{team}:
+    get:
+      parameters:
+      - in: path
+        name: team
+        required: true
+        schema:
+          example: ne
+          type: string
+      responses:
+        '200':
+          description: Successful response with NFL team data
+      summary: Get specific NFL team information
+  /sports/hockey/nhl/news:
+    get:
+      responses:
+        '200':
+          description: Successful response with NHL news
+      summary: Get latest NHL news
+  /sports/hockey/nhl/scoreboard:
+    get:
+      responses:
+        '200':
+          description: Successful response with NHL scores
+      summary: Get latest NHL scores
+  /sports/hockey/nhl/teams:
+    get:
+      responses:
+        '200':
+          description: Successful response with all NHL teams data
+      summary: Get all NHL teams
+  /sports/hockey/nhl/teams/{team}:
+    get:
+      parameters:
+      - in: path
+        name: team
+        required: true
+        schema:
+          example: tor
+          type: string
+      responses:
+        '200':
+          description: Successful response with NHL team data
+      summary: Get specific NHL team information
+  /sports/soccer/news:
+    get:
+      parameters:
+      - in: query
+        name: league
+        required: true
+        schema:
+          example: eng.1
+          type: string
+      responses:
+        '200':
+          description: Successful response with Soccer news for the league
+      summary: Get latest Soccer news by league
+  /sports/soccer/scoreboard:
+    get:
+      parameters:
+      - in: query
+        name: league
+        required: true
+        schema:
+          example: eng.1
+          type: string
+      responses:
+        '200':
+          description: Successful response with Soccer scores for the league
+      summary: Get latest Soccer scores by league
+  /sports/soccer/teams:
+    get:
+      parameters:
+      - in: query
+        name: league
+        required: true
+        schema:
+          example: eng.1
+          type: string
+      responses:
+        '200':
+          description: Successful response with all Soccer teams for the league
+      summary: Get all Soccer teams by league
+  /sports/soccer/teams/{team}:
+    get:
+      parameters:
+      - in: query
+        name: league
+        required: true
+        schema:
+          example: eng.1
+          type: string
+      - in: path
+        name: team
+        required: true
+        schema:
+          example: manutd
+          type: string
+      responses:
+        '200':
+          description: Successful response with specific Soccer team information for
+            the league
+      summary: Get specific Soccer team information by league
+  /sports/soccer/{league}/news:
+    get:
+      parameters:
+      - in: path
+        name: league
+        required: true
+        schema:
+          example: eng.1
+          type: string
+      responses:
+        '200':
+          description: Successful response with Soccer news for the league
+      summary: Get latest Soccer news by league
+  /sports/soccer/{league}/scoreboard:
+    get:
+      parameters:
+      - in: path
+        name: league
+        required: true
+        schema:
+          example: eng.1
+          type: string
+      responses:
+        '200':
+          description: Successful response with Soccer scores for the league
+      summary: Get latest Soccer scores by league
+  /sports/soccer/{league}/teams:
+    get:
+      parameters:
+      - in: path
+        name: league
+        required: true
+        schema:
+          example: eng.1
+          type: string
+      responses:
+        '200':
+          description: Successful response with all Soccer teams for the league
+      summary: Get all Soccer teams by league
+  /sports/soccer/{league}/teams/{team}:
+    get:
+      parameters:
+      - in: path
+        name: league
+        required: true
+        schema:
+          example: eng.1
+          type: string
+      - in: path
+        name: team
+        required: true
+        schema:
+          example: manutd
+          type: string
+      responses:
+        '200':
+          description: Successful response with specific Soccer team information for
+            the league
+      summary: Get specific Soccer team information by league
+servers:
+- url: http://site.api.espn.com/apis/site/v2
